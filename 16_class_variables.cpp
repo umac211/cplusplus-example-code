@@ -60,6 +60,7 @@ int main()
   
   // the instance member variables are tied to each object instance and may be 
   // difference for each object
+  cout << lion->planet << endl;
   cout << "Lion: " << lion->species << endl;
   cout << "Tiger: " << tiger->species << endl;
 

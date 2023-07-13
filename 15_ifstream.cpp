@@ -41,10 +41,10 @@ int main()
   //
 
   // variable to store number in the file
-  int number = 0;
+  //int number = 0;
   
   // attempt to read in the number
-  inFile >> number;
+  //inFile >> number;
 
   // if we attempt to read in another number it will fail and we can also 
   // detect this using the fail() function 
@@ -57,7 +57,7 @@ int main()
   }
   */
 
-  cout << number << endl;
+  // cout << number << endl;
 
 
   // Attempt to read in a file with the format:
@@ -71,17 +71,19 @@ int main()
   // double values per line.
   //
 
-  /*
+  
   double x1 = 0, x2 = 0, x3 = 0;
 
-  while (true)
+  while (!inFile.eof())
   {
     inFile >> x1 >> x2 >> x3;
-    if (inFile.eof()) break;
-    else 
-      cout << x1 << " " << x2 << " " << x3 << endl;
+    if (inFile.fail())
+    {
+      cout << "Incorrect format" << endl;
+      break;
+    }
+    cout << x1 << " " << x2 << " " << x3 << endl;
   }
-  */
 
   
   // We could also store the values into a 2D array for usage later.  Notice 
